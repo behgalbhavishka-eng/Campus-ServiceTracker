@@ -1,0 +1,185 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Service Tracker</title>
+
+    <style>
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #243247;
+            background: #f3f7fc;
+        }
+
+        nav {
+            background: #123b70;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav h2 {
+            color: white;
+            margin: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 7px;
+        }
+
+        nav a:hover { color: #a9d5ff; }
+
+        .hero {
+            text-align: center;
+            padding: 65px 20px;
+            color: white;
+            background: linear-gradient(135deg, #1559a6, #287ed0);
+        }
+
+        .hero h1 { font-size: 38px; }
+
+        .hero p {
+            max-width: 720px;
+            margin: 15px auto 25px;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 20px;
+            margin: 6px;
+            border-radius: 6px;
+            background: white;
+            color: #1559a6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .services {
+            padding: 35px 7% 50px;
+            text-align: center;
+        }
+
+        .services h2, .how h2 { color: #123b70; }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            margin-top: 28px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px 22px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .emoji { font-size: 38px; }
+
+        .card h3 { color: #1559a6; }
+
+        .card p {
+            line-height: 1.7;
+            min-height: 75px;
+        }
+
+        .card a {
+            color: #1559a6;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .how {
+            background: #e5effb;
+            padding: 35px 7%;
+            text-align: center;
+        }
+
+        footer {
+            background: #123b70;
+            color: white;
+            padding: 18px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            nav { justify-content: center; }
+            .hero h1 { font-size: 29px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <h2>Campus Service Tracker</h2>
+    <div>
+        <a href="index.jsp">Home</a>
+        <a href="complaint.jsp">Submit Complaint</a>
+        <a href="student-status.jsp">Track Status</a>
+        <a href="login.jsp">Admin Login</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <h1>Welcome to Campus Service Tracker</h1>
+    <p>
+        A simple and convenient platform to report campus problems,
+        track complaint progress, and help improve campus services.
+    </p>
+    <a class="btn" href="complaint.jsp">Submit a Complaint</a>
+    <a class="btn" href="student-status.jsp">Track Your Complaint</a>
+</section>
+
+<section class="services">
+    <h2>Our Services</h2>
+    <p>Choose an option to get started.</p>
+
+    <div class="cards">
+        <div class="card">
+            <div class="emoji">📝</div>
+            <h3>Report a Problem</h3>
+            <p>Report Wi-Fi, classroom, laboratory, cleaning, or other campus service problems.</p>
+            <a href="complaint.jsp">Submit Complaint →</a>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🔍</div>
+            <h3>Track Complaint</h3>
+            <p>Check your complaint status using your complaint ID and student ID.</p>
+            <a href="student-status.jsp">Check Status →</a>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🔒</div>
+            <h3>Administrator</h3>
+            <p>Authorized administrators can view complaints and update their progress.</p>
+            <a href="login.jsp">Admin Login →</a>
+        </div>
+    </div>
+</section>
+
+<section class="how">
+    <h2>How It Works</h2>
+    <p><strong>1. Submit:</strong> Enter your details and describe the problem.</p>
+    <p><strong>2. Track:</strong> Use your complaint ID to check its status.</p>
+    <p><strong>3. Resolve:</strong> Follow progress as the administrator updates the complaint.</p>
+</section>
+
+<footer>Campus Service Tracker | College Project</footer>
+
+</body>
+</html>
